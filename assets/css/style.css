@@ -1,18 +1,10 @@
-/**
-* Template Name: ComingSoon
-* Updated: Jul 27 2023 with Bootstrap v5.3.1
-* Template URL: https://bootstrapmade.com/comingsoon-free-html-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
   color: #fff;
-  background: url("../img/bg.jpg") top center no-repeat;
+  background: url("../img/fondo.jpeg") top center no-repeat;
   background-size: cover;
   position: relative;
 }
@@ -34,7 +26,7 @@ body::before {
 }
 
 a {
-  color: #07580b;
+  color: #04fcfa;
   text-decoration: none;
 }
 
@@ -66,7 +58,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #07580b;
+  background: #04fcfa;
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -123,7 +115,7 @@ h6 {
   width: 100px;
   padding: 15px 0;
   background: rgba(255, 255, 255, 0.12);
-  border-top: 5px solid #07580b;
+  border-top: 5px solid #04fcfa;
 }
 
 #header .countdown div h3 {
@@ -192,7 +184,7 @@ h6 {
   background: none;
   font-size: 16px;
   padding: 0 20px;
-  background: #07580b;
+  background: #04fcfa;
   color: #fff;
   transition: 0.3s;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
@@ -204,7 +196,7 @@ h6 {
 
 #header .subscribe .error-message {
   display: none;
-  color: #07580b;
+  color: #04fcfa;
   text-align: center;
   padding: 15px;
   font-weight: 600;
@@ -324,7 +316,7 @@ section {
   top: 12px;
   position: absolute;
   font-size: 20px;
-  color: #07580b;
+  color: #04fcfa;
 }
 
 .about .content p:last-child {
@@ -390,14 +382,14 @@ section {
 }
 
 .contact .info .social-links a:hover {
-  background: #07580b;
+  background: #04fcfa;
   color: #fff;
 }
 
 .contact .info .email:hover i,
 .contact .info .address:hover i,
 .contact .info .phone:hover i {
-  background: #07580b;
+  background: #04fcfa;
   color: #fff;
 }
 
@@ -414,7 +406,7 @@ section {
 
 .contact .php-email-form .validate {
   display: none;
-  color: #07580b;
+  color: #04fcfa;
   margin: 0 0 15px 0;
   font-weight: 400;
   font-size: 13px;
@@ -486,7 +478,7 @@ section {
 }
 
 .contact .php-email-form button[type=submit] {
-  background: #07580b;
+  background: #04fcfa;
   border: 0;
   padding: 10px 24px;
   color: #fff;
