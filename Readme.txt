@@ -1,5 +1,4 @@
-Template Name: ComingSoon
-Template URL: https://www.alpezdev.com
-Author: AlpezDev.com
-License: https://www.alpezdev.com
-
+Alpez Developer
+URL: https://www.alpezdev.com
+Autor: AlpezDev.com
+Licencia: https://www.alpezdev.com
