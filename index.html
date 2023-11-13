@@ -285,7 +285,7 @@
     </section><!-- End Why Us Section -->
     <!-- ======= Sección de Portafolio ======= -->
     <section id="portfolio" class="portfolio">
-        <div class="container">
+        <div class="container" id="containerPortafolio">
 
             <div class="section-title" data-aos="fade-up">
                 <h2>Portafolio</h2>
@@ -484,7 +484,7 @@
             </div>
 
         </div>
-    </section><!-- Sección de Detalles Portafolio -->
+    </section><!-- Fin Sección de Detalles Portafolio -->
     <!-- ======= Sección de Testimonios ======= -->
     <section id="testimonials" class="testimonials">
         <div class="container" data-aos="zoom-in">
@@ -1030,32 +1030,166 @@
                         });
                     });
             });
-
+            
             var link = document.getElementById('show-section1');
             var link2 = document.getElementById('hide-section1');
+
             var section1 = document.getElementById('section1');
             var section2 = document.getElementById('portfolio');
+
+            var contPorta = document.getElementById('containerPortafolio');
                      
 
             link.addEventListener('click', () => {
 
-                section1.setAttribute('style', 'display: block;');
-                section2.setAttribute('style', 'display: none;');
-                section1.offsetWidth; // recalcula estilos
+                section2.style.opacity = '1'; // Establece la opacidad inicialmente en 1
+                section2.style.transform = 'scale(1)'; // Establece la escala inicialmente en 1
 
-                //section2.classList.remove('show');
-                //section2.classList.add('hide');
-            });     
+                // Retrasa la aplicación del estilo para permitir que la animación se active
+                setTimeout(function () {
+                    section2.style.transition = 'opacity 1s, transform 1s'; // Agrega transiciones para las propiedades 'opacity' y 'transform'
+                    section2.style.transform = 'scale(0.5)'; // Aplica una transformación de escala para hacer que section2 se haga pequeño
+                }, 500);
+
+                // Retrasa la rotación de section2
+                setTimeout(function () {
+                    section2.style.transform = 'scale(0.3) rotateY(180deg)'; // Aplica una transformación de escala y giro a section2
+                }, 1000);
+
+                // Oculta el section después de que finalice la animación
+                setTimeout(function () {
+                    section2.style.display = 'none';
+                }, 1500); // Ajusta este valor para que coincida con la duración total de las transiciones y los retrasos (en este caso, 1500 milisegundos)
+
+                section1.style.display = 'block';
+                section1.style.opacity = '0'; // Establece la opacidad inicialmente en 0
+                section1.style.transform = 'scale(0.3)'; // Establece la escala inicialmente en 0.3
+
+                // Retrasa la aplicación del estilo para permitir que la animación se active
+                setTimeout(function () {
+                    section1.style.transition = 'opacity 1s, transform 1s'; // Agrega transiciones para las propiedades 'opacity' y 'transform'
+                    section1.style.opacity = '1'; // Establece la opacidad en 1 para que aparezca suavemente
+                    section1.style.transform = 'scale(1)'; // Establece la escala en 1 para que section1 se haga grande
+                }, 1500); // Ajusta este valor para que coincida con la duración total de las transiciones y los retrasos (en este caso, 1500 milisegundos)
+                
+            });
 
             link2.addEventListener('click', () => {
 
-                section1.setAttribute('style', 'display: none;');
-                section2.setAttribute('style', 'display: block;');
-                section2.offsetWidth; // recalcula estilos
+                section1.style.opacity = '1'; // Establece la opacidad inicialmente en 1
+                section1.style.transform = 'scale(1)'; // Establece la escala inicialmente en 1
 
+                // Retrasa la aplicación del estilo para permitir que la animación se active
+                setTimeout(function () {
+                    section1.style.transition = 'opacity 1s, transform 1s'; // Agrega transiciones para las propiedades 'opacity' y 'transform'
+                    section1.style.transform = 'scale(0.5)'; // Aplica una transformación de escala para hacer que section1 se haga pequeño
+                }, 500);
+
+                // Retrasa la rotación de section1
+                setTimeout(function () {
+                    section1.style.transform = 'scale(0.3) rotateY(180deg)'; // Aplica una transformación de escala y giro a section1
+                }, 1000);
+
+                // Oculta el section después de que finalice la animación
+                setTimeout(function () {
+                    section1.style.display = 'none';
+
+                    section2.style.display = 'block'; // Muestra el section2
+                    section2.style.opacity = '0'; // Establece la opacidad inicialmente en 0
+                    section2.style.transform = 'scale(0.3)'; // Establece la escala inicialmente en 0.5
+
+                    // Muestra el section2 después de que finalice la animación de section1
+                    setTimeout(function () {
+                        section2.style.transition = 'opacity 1s, transform 1s'; // Agrega transiciones para las propiedades 'opacity' y 'transform'
+                        section2.style.transform = 'scale(1)'; // Establece la escala en 1 para que section2 se haga grande
+                        section2.style.opacity = '1'; // Establece la opacidad en 1 para que aparezca suavemente
+                    }, 500); // Ajusta este valor para que coincida con la duración total de las transiciones y los retrasos (en este caso, 1000 milisegundos)
+                }, 1500); // Ajusta este valor para que coincida con la duración total de las transiciones y los retrasos (en este caso, 3000 milisegundos)
+
+            }); 
+                ///////////////////////////////////////////////////////////
+                /*
+                section1.style.opacity = '1'; // Establece la opacidad inicialmente en 1
+                section1.style.transform = 'scale(1)'; // Establece la escala inicialmente en 1
+                section1.style.transformOrigin = 'center'; // Establece el punto de transformación en el centro
+
+                section2.style.opacity = '1'; // Establece la opacidad inicialmente en 1
+                section2.style.transform = 'scale(1)'; // Establece la escala inicialmente en 1
+                section2.style.transformOrigin = 'center'; // Establece el punto de transformación en el centro
+
+                // Retrasa la aplicación del estilo para permitir que la animación se active
+                setTimeout(function () {
+                    section1.style.transition = 'opacity 1s, transform 1s'; // Agrega transiciones para las propiedades 'opacity' y 'transform'
+                    section1.style.opacity = '0'; // Establece la opacidad en 0 para que desaparezca suavemente
+                    section1.style.transform = 'scale(0.5) rotateY(180deg)'; // Aplica una transformación de escala y giro a section1
+                    section1.style.backfaceVisibility = 'hidden'; // Oculta la cara trasera de section1 durante la animación
+                }, 1000);
+
+                // Oculta el section después de que finalice la animación
+                setTimeout(function () {
+                    section1.style.display = 'none';
+                }, 2000); // Ajusta este valor para que coincida con la duración total de las transiciones y los retrasos (en este caso, 2000 milisegundos)
+
+                // Retrasa la aplicación del estilo de section2 para que aparezca después de la animación de section1
+                setTimeout(function () {
+                    section2.style.transition = 'opacity 1s, transform 1s'; // Agrega transiciones para las propiedades 'opacity' y 'transform'
+                    section2.style.opacity = '0'; // Establece la opacidad en 0 para que desaparezca suavemente
+                    section2.style.transform = 'scale(0.5)'; // Aplica una transformación de escala a section2
+                    section2.style.backfaceVisibility = 'hidden'; // Oculta la cara trasera de section2 durante la animación
+                }, 2000); // Ajusta este valor para que coincida con la duración total de las transiciones y los retrasos (en este caso, 2000 milisegundos)
+
+                // Muestra el section2 después de que finalice la animación
+                setTimeout(function () {
+                    section2.style.transition = 'opacity 1s, transform 1s';
+                    section2.style.transform = 'scale(1)'; // Establece la escala en 1 para que section2 se haga grande
+                    section2.style.opacity = '1'; // Establece la opacidad en 1 para que aparezca suavemente                    
+                }, 3000); // Ajusta este valor para que coincida con la duración total de las transiciones y los retrasos (en este caso, 3000 milisegundos)
             });
+            section2.style.display = 'block';
+            section2.style.opacity = '0'; // Establece la opacidad inicialmente en 0
+            section2.style.transform = 'scale(0.3)'; // Establece la escala inicialmente en 0.3
 
+            // Retrasa la aplicación del estilo para permitir que la animación se active
+            setTimeout(function () {
+                section2.style.transition = 'opacity 1s, transform 1s'; // Agrega transiciones para las propiedades 'opacity' y 'transform'
+                section2.style.opacity = '1'; // Establece la opacidad en 1 para que aparezca suavemente
+                section2.style.transform = 'scale(1)'; // Establece la escala en 1 para que section1 se haga grande
+            }, 1500); // Ajusta este valor para que coincida con la duración total de las transiciones y los retrasos (en este caso, 1500 milisegundos)
+            */
         })();
+        /*
+        const section1 = document.getElementById('portfolio');
+        const section2 = document.getElementById('section1');
+
+        function toggleSections() {
+            if (section1.classList.contains('section-visible')) {
+                section1.classList.remove('section-visible');
+                section1.classList.add('section-hidden');   
+
+                section2.classList.remove('section-hidden');
+                section2.classList.add('section-visible');
+
+                section2.style.display = 'block';
+                section2.style.opacity = '0'; // Establece la opacidad inicialmente en 0
+                section2.style.transform = 'scale(0.5)'; // Establece la escala inicialmente en 0.5
+
+                // Retrasa la aplicación del estilo para permitir que la animación se active
+                setTimeout(function () {
+                    section2.style.transition = 'opacity 1s, transform 1s'; // Agrega transiciones para las propiedades 'opacity' y 'transform'
+                    section2.style.opacity = '1'; // Establece la opacidad en 1 para que aparezca suavemente
+                    section2.style.transform = 'scale(1)'; // Establece la escala en 1 para que se muestre con efecto de zoom
+                }, 100);  
+
+                console.log("Llegué");
+            } else{
+                section1.classList.remove('section-hidden');
+                section1.classList.add('section-visible');
+
+                section2.classList.remove('section-visible');
+                section2.classList.add('section-hidden');
+                console.log("Me fuí");
+            }
+        }*/
 
     </script>
 
