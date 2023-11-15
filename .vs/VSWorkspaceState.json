@@ -3,8 +3,12 @@
     "",
     "\\assets",
     "\\assets\\css",
-    "\\assets\\js"
+    "\\assets\\vendor",
+    "\\assets\\vendor\\boxicons",
+    "\\assets\\vendor\\boxicons\\css",
+    "\\assets\\vendor\\glightbox",
+    "\\assets\\vendor\\glightbox\\css"
   ],
-  "SelectedNode": "\\CNAME",
+  "SelectedNode": "\\assets\\css\\style.css",
   "PreviewInSolutionExplorer": false
 }
